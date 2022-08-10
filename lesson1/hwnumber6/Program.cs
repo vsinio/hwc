@@ -5,6 +5,3 @@ if (a % 2 != 0)
     Console.Write("нет");
 else
     Console.Write("да"); 
-
-
-
