@@ -1,7 +1,7 @@
-﻿Console.Write("Введите число для определения: ");
+﻿Console.Write("Введите число для определения четных чисел: ");
 int a = Convert.ToInt32(Console.ReadLine());
-
-if (a % 2 != 0)
+int n = 0;
+while 
     Console.Write("нет");
 else
     Console.Write("да"); 

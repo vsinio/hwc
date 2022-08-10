@@ -8,7 +8,8 @@ int max = a;
 if (a > b) max = a;
 if (b > a) max = b;
 if (c > a) max = c;
-if (c > b) max = c;
+
+Console.Write("max = ");
 Console.Write(max);
 
 
