@@ -14,4 +14,4 @@ else if (a > 1000)
     while (a > 1000)
     a = a / 10;
     Console.Write(a % 10);        
-}
+} 
