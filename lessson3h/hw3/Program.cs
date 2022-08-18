@@ -1,25 +1,19 @@
-﻿
-Console.Write("Введите число: ");
-int cube = Convert.ToInt32(Console.ReadLine());
+﻿int a = Convert.ToInt32(Console.ReadLine());
 
-void Cube(int[] cube){
-  int counter = 0;
-  int length = cube.Length;
-  while (counter <  length){
-    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
-    counter++;
-  }
+string cube(int arg1)
+{
+    int count=1;
+    string ab = " ";
+    
+    while (count < arg1+1)
+        {
+        int cube1 = count * count * count;
+        Console.WriteLine(cube1);
+        count++;
+        
+        }
+    return ab;
 }
 
-void PrintArry(int[] coll){
-  int count = coll.Length;
-  int index = 1;
-  while(index < count){
-    Console.Write(coll[index]+ " ");
-    index++;
-  }
-} 
 
-int[] arry = new int[cube+1];
-Cube(arry);
-PrintArry(arry);
+Console.WriteLine(cube(a));
