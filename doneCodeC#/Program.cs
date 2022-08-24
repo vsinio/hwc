@@ -1,4 +1,22 @@
-﻿// метод создания и вывода нового двум массива
+﻿//метод заполнения массива нулями и вывод его на экран
+
+int[] mass = new int[8];
+
+void PrintArray(int []array)
+{
+    int length = array.Length;
+
+    for(int i=0; i < length;i++)
+    {
+        array[i] = 0; // new Random().Next(1, 100);
+        Console.Write($"{array[i]} ");
+    }
+}
+
+PrintArray(mass);
+
+
+// метод создания и вывода нового двум массива
 
 void PrintArray(int[,] matr)
 {
