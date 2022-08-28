@@ -8,12 +8,49 @@ void PrintArray(int []array)
 
     for(int i=0; i < length;i++)
     {
-        array[i] = 0; // new Random().Next(1, 100);
+        //array[i] = 0; // new Random().Next(1, 100); изначально array[i] = empty(пустой == 0)
         Console.Write($"{array[i]} ");
     }
 }
 
 PrintArray(mass);
+
+//заполнение массива рандомными от 10 до 10
+
+void FillArray(int []array)
+{
+    int length = array.Length;
+
+    for(int i=0; i < length;i++)
+    {
+        array[i] = new Random().Next(1, 10);
+    }
+}
+
+
+//метод поиска числа в одномерном массиве
+void SearchInt(int[] array)
+{
+    int a = Convert.ToInt32(Console.ReadLine());
+    int length = array.Length;
+    int search = 0;
+
+    for(int i = 0; i < length; i++)
+    {
+        if(array[i]==a)
+            {
+                search++;
+            }
+    }
+    if(search > 0)
+    {
+        Console.WriteLine($"в этом массиве есть искомое число и оно встречается {search} раз");
+    }
+    else
+    {
+        Console.WriteLine("нет, искомого числа нет :(");
+    }
+}   
 
 
 // метод создания и вывода нового двум массива
