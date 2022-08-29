@@ -68,9 +68,9 @@ void PrintArray(int[,] matr)
 //метод генерации чисел в заданном масиве
 void FillArray(int[,] matr1)
 {
-    for (int i = 0; i < matr1.GetLength(0); i++)
+    for (int i = 0; i < matr1.GetLength(0); i++)  // (0) строка
     {
-        for (int j = 0; j < matr1.GetLength(1); j++)
+        for (int j = 0; j < matr1.GetLength(1); j++)  // (1) столбец 
         {
             matr1[i, j] = new Random().Next(1, 10);
         }
