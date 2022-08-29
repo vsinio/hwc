@@ -48,4 +48,4 @@ int HowManyBigger(int[] array)
 
 FillArrayByUser(mass);
 PrintArray(mass);
-Console.Write($" => {HowManyBigger(mass)}");
+Console.WriteLine($" => {HowManyBigger(mass)}");
