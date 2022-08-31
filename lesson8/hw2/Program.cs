@@ -68,4 +68,4 @@ FillArray(matrix);
 PrintArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
-maxSumm(matrix);
+maxSummPrint(matrix);
