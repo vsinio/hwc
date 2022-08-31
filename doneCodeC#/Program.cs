@@ -86,6 +86,14 @@ Console.WriteLine();
 PrintArray(matrix);
 
 
+//создание массива с указанием колва строк и столбцов
+Console.WriteLine("Введите количество строк массива:");
+int sizeLine = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов массива:");
+int sizeColumn = Convert.ToInt32(Console.ReadLine());
+
+int[,] matrix = new int[sizeLine, sizeColumn];
+
 
 // ввод чисел через " пробел " 
 int[] numbers = Array.ConvertAll(Console.ReadLine().Split(" "), int.Parse);
