@@ -24,6 +24,7 @@ void FillArray(int[] array)
     {
         array[i] = new Random().Next(1, 10);
     }
+    Console.WriteLine();
 }
 
 //метод поиска числа в одномерном массиве
@@ -117,3 +118,24 @@ char[] sReverse = s.ToCharArray();   // создаем массив char
 Array.Reverse(sReverse);             // переворачиваем массив
 s = new string(sReverse);            // задаем строку из массива заново . ps. проще сразу вкидывать 
                                      //в массив значения(если известно колво элементов)
+
+
+//метод сортировки по убыванию двумерного массива
+void SelectionSort(int[,] matr) 
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1) - 1; j++)
+        {
+            for (int k = j + 1; k < matr.GetLength(1); k++)
+            {
+                if (matr[i, j] < matr[i, k])           //по убыванию(замена знака если что)
+                {
+                    int temp = matr[i, j];
+                    matr[i, j] = matr[i, k];
+                    matr[i, k] = temp;
+                }
+            }
+        }
+    }
+}
