@@ -16,7 +16,6 @@ Console.WriteLine("Введите количество столбцов масс
 int sizeColumn = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[sizeLine, sizeColumn];
-int[] matr = new int[sizeColumn];
 
 void maxSummPrint(int[,] matrix)
 {
