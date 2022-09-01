@@ -18,7 +18,7 @@ int sizeColumn = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[sizeLine, sizeColumn];
 
-void SelectionSort(int[,] matr) // 2 4 4 7 8 3 2
+void SelectionSort(int[,] matr) 
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
