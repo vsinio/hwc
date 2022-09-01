@@ -1,4 +1,4 @@
-﻿int[] array1 = { 1, 5, 9, 6, 7, 4, 3, 8, 2, 3, 3, 6, 6 };
+﻿int[] array1 = { 9, 5, 9, 6, 7, 4, 3, 8, 2, 3, 3, 6, 6 };
 
 void PrintArray(int[] array)
 {
