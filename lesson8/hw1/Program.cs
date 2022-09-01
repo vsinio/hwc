@@ -11,7 +11,6 @@
 
 
 Console.Clear();
-
 Console.WriteLine("Введите количество строк массива:");
 int sizeLine = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов массива:");
@@ -19,28 +18,22 @@ int sizeColumn = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = new int[sizeLine, sizeColumn];
 
-void SelectionSort(int[,] matr)
+void SelectionSort(int[,] matr) // 2 4 4 7 8 3 2
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j = 0; j < matr.GetLength(1)-1; j++)
-        {   
-            int MaxPos = matr[i,j];
-            for(int k = j+1; k < matr.GetLength(0); k++)
-            {           // 1 4 7 2
-                if(matr[i,j] < MaxPos)
+        for (int j = 0; j < matr.GetLength(1) - 1; j++)
+        {
+            for (int k = j + 1; k < matr.GetLength(1); k++)
+            {
+                if (matr[i, j] < matr[i, k])
                 {
-                    MaxPos = matr[i,j];
+                    int temp = matr[i, j];
+                    matr[i, j] = matr[i, k];
+                    matr[i, k] = temp;
                 }
             }
-            int temp = matr[i,j];
-            matr[i,j] = MaxPos;
-            MaxPos = temp;
-
-
-           
         }
-        
     }
 }
 
