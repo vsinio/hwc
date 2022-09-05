@@ -44,7 +44,7 @@ void PrintArray(int[,,] matr)
         }
     }
 }
- 
+
 FillArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
