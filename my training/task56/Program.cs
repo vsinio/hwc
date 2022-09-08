@@ -1,7 +1,7 @@
-﻿// 55. Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
+﻿// 56. Написать программу, которая обменивает элементы первой строки и последней строки
+
 
 int[,] matrix = new int[4,4];
-
 
 void PrintArray(int[,] matr)
 {
@@ -26,20 +26,22 @@ void FillArray(int[,] matr1)
     }
 }
 
-void SrArfm(int[,] matr)
+void firstlastSwap(int[,] matr)
 {
-
     for (int i = 0; i < matr.GetLength(0); i++)  // (0) строка
     {
-        int summ = 0;
         for (int j = 0; j < matr.GetLength(1); j++)  // (1) столбец 
         {
-            summ=summ + matr[i,j];
+            int temp = matr[0,j];
+            matr[0,j] = matr[3, j]; 
+            matr[3, j] = temp;
         }
-        Console.WriteLine($"ср арфм строки {i+1} = {summ / matr.GetLength(1)}");
+    break;
     }
 }
 
 FillArray(matrix);
 PrintArray(matrix);
-SrArfm(matrix);
+Console.WriteLine();
+firstlastSwap(matrix);
+PrintArray(matrix);

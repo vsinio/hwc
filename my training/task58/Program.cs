@@ -1,7 +1,8 @@
-﻿// 55. Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
+﻿// 58. Написать программу, которая в двумерном массиве заменяет строки на столбцы
+//  или сообщить, что это невозможно (в случае, если матрица не квадратная).
+
 
 int[,] matrix = new int[4,4];
-
 
 void PrintArray(int[,] matr)
 {
@@ -17,29 +18,33 @@ void PrintArray(int[,] matr)
 
 void FillArray(int[,] matr1)
 {
+
     for (int i = 0; i < matr1.GetLength(0); i++)  // (0) строка
     {
         for (int j = 0; j < matr1.GetLength(1); j++)  // (1) столбец 
         {
-            matr1[i, j] = new Random().Next(1, 10);;
+            matr1[i, j] = i+1;
         }
     }
 }
 
-void SrArfm(int[,] matr)
+void Swap(int[,] matr)
 {
-
     for (int i = 0; i < matr.GetLength(0); i++)  // (0) строка
     {
-        int summ = 0;
+
         for (int j = 0; j < matr.GetLength(1); j++)  // (1) столбец 
         {
-            summ=summ + matr[i,j];
+            int temp = matr[i,j];
+            matr[j,i] = matr[i, j]; 
+            matr[j, i] = temp;
         }
-        Console.WriteLine($"ср арфм строки {i+1} = {summ / matr.GetLength(1)}");
+        break;
     }
 }
 
 FillArray(matrix);
 PrintArray(matrix);
-SrArfm(matrix);
+Console.WriteLine();
+Swap(matrix);
+PrintArray(matrix);
